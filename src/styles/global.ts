@@ -26,6 +26,10 @@ export const GlobalStyle = createGlobalStyle`
        -webkit-font-smooth: antialiased;
     }
 
+    body, input, text-area, select, button {
+        font: 400 1rem "Roboto" , sans-serif;
+    }
+
     #root {
        max-width: 960px;
        margin: 0 auto;
@@ -40,7 +44,7 @@ export const GlobalStyle = createGlobalStyle`
        color: inherit;
        text-decoration: none;
     }
-
+    
     
 `;
 
