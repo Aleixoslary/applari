@@ -1,7 +1,21 @@
 import React from 'react';
 
-export const Dashboard: React.FC = ()  =>{
+import { Title, Form } from './styles'
+import logo  from '../../assets/logo_.png';
+import { Logo } from '../../styles/global'
+
+
+
+export const Dashboard: React.FC = () => {
   return (
-    <h1>Dashboard</h1>
+      <>
+        <Logo src={logo} alt="GitCollection" />
+        <Title>Catálogo de repositórios do Github</Title>
+
+        <Form>
+          <input placeholder="username/repository_name" />
+          <button type="submit">Buscar</button>
+        </Form>
+      </>
   );
 };
