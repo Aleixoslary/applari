@@ -48,6 +48,6 @@ export const GlobalStyle = createGlobalStyle`
     
 `;
 
-export const Logo = styled.img`
+export const LogoStyle = styled.img`
     width: 10vw;
 `;
