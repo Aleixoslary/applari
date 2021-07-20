@@ -1,5 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { shade } from 'polished';
+
+
+//Criando uma props no styled component para definir quando o input está com erro
+interface FormProps {
+    hasError: boolean;
+};
 
 export const Title = styled.h1`
     font-size: 48px;
@@ -9,7 +15,9 @@ export const Title = styled.h1`
     margin-top: 80px;
 `;
 
-export const Form = styled.form`
+
+// Informando para o Form que ele possui propriedades
+export const Form = styled.form<FormProps>`
     margin-top: 40px;
     max-width: 700px;
     display: flex;
@@ -27,6 +35,10 @@ export const Form = styled.form`
         &::placeholder {
             color: #a8a8b3;
         }
+
+        ${props => props.hasError && css`
+            border-color: #c53030;
+        `}
     }
 
     button {
@@ -50,6 +62,7 @@ export const Repos = styled.div`
 
     a {
         background: #FFF;
+        margin-top: 30px;
         border-radius: 5px;
         width: 100%;
         padding: 24px;
@@ -94,4 +107,10 @@ export const Repos = styled.div`
     & + a {
         margin-top: 16px;
     }
+`;
+
+export const Error = styled.span`
+    display: block;
+    color: #c53030;
+    margin-top: 8px;
 `;
