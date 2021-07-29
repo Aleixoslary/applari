@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { shade } from 'polished';
 
 export const Header = styled.header`
     display: flex;
@@ -70,4 +71,50 @@ export const RepoInfos = styled.section`
             }
         }
     }
+`;
+
+export const Issues = styled.div`
+    margin-top: 80px;
+    a {
+        background: #FFF;
+        border-radius: 5px;
+        width: 100%;
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: box-shadow 0.9 ease-in;
+
+        &:hover {
+            -webkit-box-shadow: 0px 0px 15px 7px rgba(254,96,96,0.57); 
+            box-shadow: 0px 0px 15px 7px rgba(254,96,96,0.57);
+        }
+
+        & + a {
+            margin-top: 16px;
+
+        } 
+
+        div {
+            margin: 0 16px;
+            flex: 1;
+            
+            strong {
+                font-size: 20px;
+                color: #3d3d4d;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            color: #a8a8b3;
+        }
+
+    }
+
+    svg {
+        margin-left: auto;
+        color: #cbcbd6;
+    }
+  
 `;

@@ -3,8 +3,8 @@ import { Link, useRouteMatch } from 'react-router-dom';
 
 import logo from '../../assets/logo_.png';
 import { LogoStyle } from '../../styles/global';
-import { Header, RepoInfos } from './styles';
-import { FiChevronLeft } from 'react-icons/fi';
+import { Header, RepoInfos, Issues } from './styles';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 //Criando uma interface para tipar o fullname (que vem do parâmetro) do repositório;
 interface RepositoryParams {
@@ -33,21 +33,31 @@ export const Repo: React.FC = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim nec ligula sit amet facilisis. Curabitur elit mauris, vestibulum sit amet molestie vitae, rhoncus dignissim nunc.</p>
           </div>
         </header>
-         <ul>
-           <li>
-             <strong>2238</strong>
-             <span>Stars</span>
-            </li>
-            <li>
-             <strong>210</strong>
-             <span>Forks</span>
-            </li>
-            <li>
-             <strong>10</strong>
-             <span>Issues abertas</span>
-            </li>
-         </ul>
+        <ul>
+          <li>
+            <strong>2238</strong>
+            <span>Stars</span>
+          </li>
+          <li>
+            <strong>210</strong>
+            <span>Forks</span>
+          </li>
+          <li>
+            <strong>10</strong>
+            <span>Issues abertas</span>
+          </li>
+        </ul>
       </RepoInfos>
+
+      <Issues>
+        <Link to="/">
+          <div>
+            <strong>TÍTULO</strong>
+            <p>DESCRIÇÃO</p>
+          </div>
+          <FiChevronRight size={20} />
+        </Link>
+      </Issues>
     </>
   );
 };
