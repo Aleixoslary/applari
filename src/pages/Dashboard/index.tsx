@@ -31,7 +31,7 @@ export const Dashboard: React.FC = () => {
   const [inputError, setInputError] = React.useState('');
 
 
-  //Utilizando o Hook useEfect para setar o conteúdo do array repos no localStorage;
+  // Utilizando o Hook useEfect para setar o conteúdo do array repos no localStorage;
   React.useEffect(() => {
     localStorage.setItem('@appLari:repositories', JSON.stringify(repos))
   }, [repos]);
@@ -84,7 +84,7 @@ export const Dashboard: React.FC = () => {
         <input placeholder="username/repository_name" onChange={handleInputChange} />
         <button type="submit">Buscar</button>
       </Form>
-
+      
       {inputError && <Error>{inputError}</Error>}
 
       <Repos>

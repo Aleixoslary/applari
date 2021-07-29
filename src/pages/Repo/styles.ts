@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { shade } from 'polished';
 
 export const Header = styled.header`
     display: flex;
@@ -116,5 +115,5 @@ export const Issues = styled.div`
         margin-left: auto;
         color: #cbcbd6;
     }
-  
+
 `;
