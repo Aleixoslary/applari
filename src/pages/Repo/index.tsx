@@ -100,7 +100,7 @@ export const Repo: React.FC = () => {
 
       <Issues>
         {issues.map(issue => (
-          <a href={issue.html_url} key={issue.id} target="_blank">
+          <a href={issue.html_url} key={issue.id} target="_blank" rel="noreferrer">
             <div>
               <strong>{issue.title}</strong>
               <p>{issue.user.login}</p>
