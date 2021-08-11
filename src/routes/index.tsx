@@ -3,12 +3,23 @@ import { Switch, Route } from "react-router-dom";
 // import { Dashboard } from '../pages/Dashboard';
 // import { Repo } from '../pages/Repo';
 
-
 //Usando o React.lazy para dividir os pacotes na hora do bundle, isso  ajuda a carregar somente o necessário ao usuário
 
 // A função do React.lazy permite renderizar uma importação dinâmica como se fosse um componente comum.
-const Dashboard = React.lazy(() => import("../pages/Dashboard"));
-const Repo = React.lazy(() => import("../pages/Repo"));
+const Dashboard = React.lazy(
+  () =>
+    import(
+      /* webpackPrefetch: true */
+      /* webpackChunkName: "dashboard" */ "../pages/Dashboard"
+    )
+);
+const Repo = React.lazy(
+  () =>
+    import(
+      /* webpackPrefetch: true */
+      /* webpackChunkName: "repo" */ "../pages/Repo"
+    )
+);
 
 export const Routes: React.FC = () => {
   return (
